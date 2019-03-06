@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Coding Challenge - Project Management Tool</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/css-reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+<body onload="reloadTable();">
+
+    <div class="container-fluid text-center mt-5 pt-5">
+        <a href="user.html" class="btn btn-primary btn-lg active mx-4" role="button" aria-pressed="true">Users</a>
+        <a href="sprint.html" class="btn btn-primary btn-lg active mx-4" role="button" aria-pressed="true">Sprints</a>
+        <a href="issue.html" class="btn btn-primary btn-lg active mx-4" role="button" aria-pressed="true">Issues</a> 
+    </div>
+
+    <table id="overview-table" class="my-5">
+        <thead>
+            <tr>
+                <th rowspan="2">Sprint</th>
+                <th colspan="6">Features</th>
+                <th colspan="6">Bugs</th>
+                <th colspan="6">Tasks</th>
+            </tr>
+                <th>New</th>
+                <th>In progress</th>
+                <th>Feedback</th>
+                <th>Rework</th>
+                <th>Resolved</th>
+                <th>Ready for testing</th>
+                <th>New</th>
+                <th>In progress</th>
+                <th>Feedback</th>
+                <th>Rework</th>
+                <th>Resolved</th>
+                <th>Ready for testing</th>
+                <th>New</th>
+                <th>In progress</th>
+                <th>Feedback</th>
+                <th>Rework</th>
+                <th>Resolved</th>
+                <th>Ready for testing</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+        
+    </table>
+    
+    <script src="helpers/localStorage.js"></script>
+    <script src="helpers/constants.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

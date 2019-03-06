@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Coding Challenge - Project Management Tool</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/css-reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+<body onload="reloadTable(); populateDropdowns()">
+
+    <div id="container" class="container-fluid">
+
+        <a href="index.html" class="btn btn-primary btn-lg active mt-4" role="button" aria-pressed="true">Back</a>
+        <br>
+        <input type="text" id="searchInput" class="my-4" placeholder="Search for sprint or status..." onkeyup="filter()">
+
+        <table id="issues-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Sprint</th>
+                    <th>Created by</th>
+                    <th>Assignee</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Tasks</th>
+                    <th>Comments</th>
+                    <th>Updated at</th>
+                    <th>Created at</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td>
+                        <select id="type-dropdown" name="type" onchange="changeType()"></select>
+                    </td>
+                    <td>
+                        <input type="text" name="name" />
+                    </td>
+                    <td>
+                        <select id="sprint-dropdown" name="sprint"></select>
+                    </td>
+                    <td>
+                        <select id="created-by-dropdown" name="createdBy"></select>
+                    </td>
+                    <td>
+                        <select id="assignee-dropdown" name="assignee"></select>
+                    </td>
+                    <td>
+                        <input type="text" name="description" />
+                    </td>
+                    <td>
+                        <select id="status-dropdown" disabled name="status"></select>
+                    </td>
+                    <td>
+                        <select id="subtasks-dropdown" multiple name="subtasks"></select>
+                    </td>
+                    <td>
+                        Comments
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button type="button" onclick="addIssue()" class="btn btn-primary btn-lg active mt-4">Add</button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+    </div>
+
+    <script src="helpers/localStorage.js"></script>
+    <script src="helpers/constants.js"></script>
+    <script src="js/issue.js"></script>
+
+</body>
+</html>

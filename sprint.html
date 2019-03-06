@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Coding Challenge - Project Management Tool</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/css-reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+<body onload="reloadTable()">
+
+    <div id="container" class="container-fluid">
+
+        <a href="index.html" class="btn btn-primary btn-lg active mt-4" role="button" aria-pressed="true">Back</a>
+
+        <table id="sprints-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="text" name="sprintName" />
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="text-center">
+            <button type="button" onclick="addSprint()" class="btn btn-primary btn-lg active mt-4">Add</button>
+        </div>
+    </div>
+
+    <script src="helpers/localStorage.js"></script>
+    <script src="js/sprint.js"></script>
+
+</body>
+</html>
